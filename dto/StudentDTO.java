@@ -1,8 +1,9 @@
+
 package com.example.Students.dto;
 
 
-import com.example.Students.Address;
-import com.example.Students.Qualification;
+import com.example.Students.Entity.Address;
+import com.example.Students.Entity.Qualification;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotEmpty;

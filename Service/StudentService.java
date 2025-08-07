@@ -1,4 +1,4 @@
-package com.example.Students;
+package com.example.Students.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,14 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.Students.Entity.Address;
+import com.example.Students.Entity.Qualification;
+import com.example.Students.Entity.Student;
+import com.example.Students.Repository.AddressRepository;
+import com.example.Students.Repository.QualificationRepository;
+import com.example.Students.Repository.StudentRepository;
 import com.example.Students.dto.StudentDTO;
+import com.example.Students.dto.StudentFullDTO;
 
 @Service
 public class StudentService {
@@ -205,7 +212,7 @@ public class StudentService {
     }
 
 
-	public List<com.example.Students.StudentDTO> getStudentByQuery(int id) {
+	public List<com.example.Students.dto.StudentDTOI> getStudentByQuery(int id) {
 		return repo.getStudentByQuery(id);
 	}
 }

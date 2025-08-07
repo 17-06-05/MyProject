@@ -1,4 +1,4 @@
-package com.example.Students;
+package com.example.Students.dto;
 
 public class StudentFullDTO {
 	private int sNo;

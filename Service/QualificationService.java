@@ -1,4 +1,4 @@
-package com.example.Students;
+package com.example.Students.Service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,6 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.Students.Entity.Qualification;
+import com.example.Students.Repository.QualificationRepository;
 import com.example.Students.dto.QualificationDTO;
 @Service
 public class QualificationService {

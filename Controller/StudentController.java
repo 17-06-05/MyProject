@@ -1,4 +1,4 @@
-package com.example.Students;
+package com.example.Students.Controller;
 
 import java.util.*;
 
@@ -6,8 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
+import com.example.Students.Entity.Student;
 import com.example.Students.ResponseGenerator.ResponseGenerator;
+import com.example.Students.Service.StudentService;
 import com.example.Students.dto.StudentDTO;
+import com.example.Students.dto.StudentFullDTO;
+
 import jakarta.validation.Valid;
 
 @RestController
@@ -86,7 +90,7 @@ public class StudentController {
     @GetMapping("/getByQuery/{id}")
     public ResponseEntity<?> getStudentByQuery(@PathVariable int id) {
         try {
-            List<com.example.Students.StudentDTO> studentList = service.getStudentByQuery(id);
+            List<com.example.Students.dto.StudentDTOI> studentList = service.getStudentByQuery(id);
 
             if (!studentList.isEmpty()) {
                 return ResponseGenerator.successResponse("Student found", studentList.get(0)); 

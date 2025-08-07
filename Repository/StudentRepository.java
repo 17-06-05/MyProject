@@ -1,4 +1,4 @@
-package com.example.Students;
+package com.example.Students.Repository;
 
 
 import java.util.List;
@@ -8,6 +8,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
+
+import com.example.Students.Entity.Student;
+import com.example.Students.dto.StudentDTOI;
 
 
 @Repository
@@ -20,6 +23,6 @@ public interface StudentRepository extends JpaRepository<Student, Integer> {
 		     + "FROM Student s JOIN Address a ON a.studentId = s.studentId "
 		     + "JOIN Qualification q ON q.studentId = s.studentId "
 		     + "WHERE s.studentId = :id")
-	List<StudentDTO> getStudentByQuery(@Param("id") int id);
+	List<StudentDTOI> getStudentByQuery(@Param("id") int id);
 
 	}

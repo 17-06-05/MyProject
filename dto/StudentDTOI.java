@@ -1,6 +1,6 @@
-package com.example.Students;
+package com.example.Students.dto;
 
-public interface StudentDTO {
+public interface StudentDTOI {
 	
 	 int getsNo();
 	 String getStudentName();
